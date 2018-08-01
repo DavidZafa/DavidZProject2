@@ -7,10 +7,10 @@ const User = new Schema({
     email: String,
     password: String
   },
-  bread: [
+  basketball: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Bread"
+      ref: "basketball"
     }
   ]
 });

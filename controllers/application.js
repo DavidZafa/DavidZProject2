@@ -1,13 +1,13 @@
-const { Bread } = require("../models/bread");
+const { Basketball } = require("../models/basketball");
 
 module.exports = {
   index: (req, res) => {
-    Bread.find({})
+    Basketball.find({})
       .sort({ createdAt: -1 })
       .limit(10)
       .populate("author")
-      .then(breads => {
-        res.render("app/index", { breads });
+      .then(basketballs => {
+        res.render("app/index", { basketballs });
       });
   }
 };

@@ -1,12 +1,12 @@
 const User = require("../models/user");
-const { Bread } = require("../models/bread");
+const { Basketball } = require("../models/basketball");
 const passport = require("passport");
 
 module.exports = {
   show: (req, res) => {
     User.findOne({ _id: req.params.id })
       .populate({
-        path: "breads",
+        path: "basketballs",
         options: { limit: 5, sort: { createdAt: -1 } }
       })
       .then(user => {
