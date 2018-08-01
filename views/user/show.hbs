@@ -1,0 +1,12 @@
+<section class="profile">
+  <h2>{{user.local.email}}</h2>
+  {{#if user.breads}}
+    <div class="breads">
+      {{#each user.breads}}
+         {{> 'bread'}}
+      {{/each}}
+    </div>
+  {{else}}
+    <p>No Bread yet</p>
+  {{/if}}
+</section>
