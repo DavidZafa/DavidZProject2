@@ -1,8 +1,8 @@
 <section class="profile">
-  <h2>{{user.local.email}}</h2>
-  {{#if user.basketballs}}
+  <h2>{{user.local.username}}</h2>
+  {{#if user.basketball}}
     <div class="basketballs">
-      {{#each user.basketballs}}
+      {{#each user.basketball}}
          {{> 'basketball'}}
       {{/each}}
     </div>

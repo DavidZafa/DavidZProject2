@@ -19,11 +19,11 @@ module.exports = {
     res.render("basketball/new");
   },
   create: (req, res) => {
-    Basketball.create({
+     Basketball.create({
       content: req.body.basketball.content,
       author: req.user._id
     }).then(basketball => {
-      req.user.basketballs.push(basketball);
+      req.user.basketball.push(basketball);
       req.user.save(err => {
         res.redirect(`/basketball/${basketball._id}`);
       });
@@ -32,11 +32,11 @@ module.exports = {
   update: (req, res) => {
     let { content } = req.body;
     Basketball.findOne({ _id: req.params.id }).then(basketball => {
-      basketball.comments.push({
+      basketball.player.push({
         content,
         author: req.user._id
       });
-      read.save(err => {
+      basketball.save(err => {
         res.redirect(`/basketball/${basketball._id}`);
       });
     });

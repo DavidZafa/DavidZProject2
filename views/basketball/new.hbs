@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>TV Maze API Search</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <main>
-
-
-
-    <div class="browse">
-      <form id="search">
-        <input type="search" placeholder="Search for a Player" id="player-search">
-        <input id = "submit" type="submit" value="Submit">
-      </form>
-
-      <select id="player-select">
-        <option value="">Select A Player</option>
-      </select>
-
-      <div id="Player-detail"></div>
-
-    </div>
-  </main>
-  <button id="player-add">
-    <option value="">Add Player to Favorites</option>
-  </select>
-
-  <script src=""></script>
-</body>
-</html>
+<section class="form-container">
+  <h4>New Player</h4>
+  <form action="/basketball" method="post" class="basketball-form">
+    <p class="input-field">
+      <textarea name="basketball[content]" cols="30" rows="1"></textarea>
+    </p>
+    <p class="input-field">
+      <input type="submit" value="basketball" class="btn waves-effect waves-light">
+    </p>
+  </form>
+</section>

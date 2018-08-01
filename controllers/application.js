@@ -5,9 +5,8 @@ module.exports = {
     Basketball.find({})
       .sort({ createdAt: -1 })
       .limit(10)
-      .populate("author")
-      .then(basketballs => {
-        res.render("app/index", { basketballs });
+      .then(basketball => {
+        res.render("app/index", { basketball });
       });
   }
-};
+}

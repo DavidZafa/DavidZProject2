@@ -4,10 +4,7 @@ const Schema = mongoose.Schema;
 
 const Basketball = new Schema({
   content: String,
-  createdAt: {
-    type: Date,
-    default: Date.now()
-  },
+  player: [String],
   author: {
     type: Schema.Types.ObjectId,
     ref: "User"
@@ -15,5 +12,5 @@ const Basketball = new Schema({
 });
 
 module.exports = {
-  Bread: mongoose.model("basketball", Basketball)
+  Basketball: mongoose.model("Basketball", Basketball)
 };
