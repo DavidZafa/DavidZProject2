@@ -1,4 +1,4 @@
-const BasketballTeam= require('../models/basketballteam')
+const BasketballTeam = require('../models/basketballteam')
 const Basketball = require('../models/basketball')
 
 
