@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");
-
+const NBA = require("nba")
 const app = express();
 require("./config/passport")(passport);
 hbs.registerPartials(__dirname + "/views/partial");
