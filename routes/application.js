@@ -12,5 +12,5 @@ router.get('/login', function(req, res){
 
 router.use('/user', require('./user'))
 router.use('/basketball', require('./basketball'))
-router.use('/basketballinstance', require('./basketballinstance'))
+router.use('/basketballteam', require('./basketballteam'))
 module.exports = router;

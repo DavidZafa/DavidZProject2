@@ -6,7 +6,7 @@ module.exports = {
   show: (req, res) => {
     User.findOne({ _id: req.params.id })
       .populate({
-        path: "basketballs",
+        path: "show",
         options: { limit: 5, sort: { createdAt: -1 } }
       })
       .then(user => {
@@ -14,11 +14,10 @@ module.exports = {
       });
   },
   login: (req, res) => {
-    res.render("user/login", { message: req.flash("signupMessage") });
-  },
+    },
   createLogin: (req, res) => {
     const login = passport.authenticate("local-login", {
-      successRedirect: "/",
+      successRedirect: "/user/profile",
       failureRedirect: "/login",
       failureFlash: true
     });
@@ -26,7 +25,6 @@ module.exports = {
     return login(req, res);
   },
   signUp: (req, res) => {
-    res.render("user/signup", { message: req.flash("signupMessage") });
   },
   createSignUp: (req, res) => {
     const signup = passport.authenticate("local-signup", {

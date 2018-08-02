@@ -1,8 +1,8 @@
-<section class="profile">
+<section class="Team">
   <h2>{{user.local.username}}</h2>
-  {{#if user.basketballs}}
+  {{#if user.show}}
     <div class="basketballs">
-      {{#each user.basketballs}}
+      {{#each user.show}}
          {{> 'basketball'}}
       {{/each}}
     </div>

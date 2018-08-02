@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const basketballTeam = require('../controllers/basketballteam')
+const basketballTeam =  require('../controllers/basketballteam')
 
 router.get('/:id', basketballTeam.show)
 router.get('/new', basketballTeam.new)

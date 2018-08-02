@@ -1,22 +1,16 @@
-<p class="card">
-  {{> 'basketball'}}
-</p>
 <div class = 'search'>
-<p class='playername'>{{basketball.player.name}}</p>
-<p class='playerposition'>{{basketball.player.position}}</p>
-<p class='playerage'>{{basketball.player.age}}</p>
-<p class='playerteam'>{{basketball.player.team}}</p>
-<div class="card">
-  <div class="card-content">
-    <form method="POST" action="/basketball/{{id}}?_method=PUT" class="row">
-      <p class="input-field inline col s10">
-        <label for="content"></label>
-        <input type="text" name="content" id="">
-      </p>
-      <p class="input-field inline col s2">
-        <input class="btn" type="submit" value="Submit">
-      </p>
-    </form>
-  </div>
-</div>
+<p class='playerfirstname'>{{basketball.player.firstName}}</p>
+<p class='playerlastname'>{{basketball.player.lastName}}</p>
+<p class='playerid'>{{basketball.player.playerID}}</p>
+<p class='playerteam'>{{basketball.player.teamID}}</p>
+<form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
+  <p class='input-field'>
+    <input type="hidden" name="playerID" value="{{player._id}}">
+    <input class='addto' type='submit' value='+ to Team'>
+  </p>
+</form>
+
+  <p class='or'>Or</p>
+
+  <p class='pagelinkparent'><a class='pagelink pagelinkshow' href='/basketball/new'>Go Back</a></p>
 </div>

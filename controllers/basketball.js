@@ -1,6 +1,6 @@
 const Basketball = require('../models/basketball')
-const User = require('../models/User')
-const Instance = require('../models/basketballinstance')
+const User = require('../models/user')
+const Team = require('../models/basketballteam')
 
 
 module.exports = {
@@ -8,12 +8,12 @@ module.exports = {
 
   },
   new: (req,res) => {
-    res.render('basketbal/new', {player: 'new'})
+    res.render('basketball/new', {name: 'new'})
   },
 
   search: (req, res) => {
   console.log(req.body)
-  Basketball.findOne({'info.player': req.body.name})
+  Basketball.findOne({'info.name': req.body.name})
   .then(basketball => {
     res.render('basketball/show', {basketball})
   })

@@ -25,8 +25,15 @@ app.use(
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(function (req, res, next) {
+  res.locals.currentUser = req.user
+  next()
+})
 
-app.use(require("./routes/index.js"));
+app.use(require('./routes/application.js'))
 app.use('/user', require('./routes/user'))
 app.use('/basketball', require('./routes/basketball'))
-app.listen(3000, () => console.log("server is running"));
+app.use('/basketballteam', require('./routes/basketballteam'))
+
+app.set('port', process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000)

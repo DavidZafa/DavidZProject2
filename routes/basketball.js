@@ -1,10 +1,11 @@
 const express = require("express")
 const router = express.Router()
-const basketballController = require("../controllers/basketball.js")
+const basketballController = require("../controllers/basketball")
 
-router.post("/",  basketballController.create)
+
 router.get("/new",  basketballController.new)
 router.get("/:id", basketballController.show)
 router.put("/:id",  basketballController.update)
+router.post('/search/', basketballController.search)
 router.delete('/:id', basketballController.delete)
 module.exports = router

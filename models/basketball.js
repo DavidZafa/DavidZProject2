@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const Basketball = new Schema({
   playerdata : {
-    name: String,
-    position: String,
-    age: Number,
-    team: String
+    firstName: String,
+  lastName: String,
+  playerId: Number,
+  teamId: Number,
   }
 })
 module.exports =  mongoose.model("Basketball", Basketball)
