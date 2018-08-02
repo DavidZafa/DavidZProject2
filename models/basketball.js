@@ -1,16 +1,12 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
-
 const Basketball = new Schema({
-  content: String,
-  player: [String],
-  author: {
-    type: Schema.Types.ObjectId,
-    ref: "User"
+  playerdata : {
+    name: String,
+    position: String,
+    age: Number,
+    team: String
   }
-});
-
-module.exports = {
-  Basketball: mongoose.model("Basketball", Basketball)
-};
+})
+module.exports =  mongoose.model("Basketball", Basketball)

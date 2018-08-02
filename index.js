@@ -9,7 +9,7 @@ const methodOverride = require("method-override");
 
 const app = express();
 require("./config/passport")(passport);
-hbs.registerPartials(__dirname + "/views/partials");
+hbs.registerPartials(__dirname + "/views/partial");
 app.use(express.static("public"));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,7 +17,7 @@ app.set("view engine", "hbs");
 app.use(methodOverride("_method"));
 app.use(
   session({
-    secret: "EXPRESS-IS-AWESOME",
+    secret: "memes",
     saveUninitialized: true,
     resave: false
   })
@@ -27,5 +27,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(require("./routes/index.js"));
-
+app.use('/user', require('./routes/user'))
+app.use('/basketball', require('./routes/basketball'))
 app.listen(3000, () => console.log("server is running"));

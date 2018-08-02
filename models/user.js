@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 
 const User = new Schema({
   local: {
+    username: String,
     email: String,
-    password: String,
-    username: String
-  },
-  basketball: [
+    password: String
+    },
+  team: [
     {
       type: Schema.Types.ObjectId,
       ref: "basketball"

@@ -1,12 +1,13 @@
 <section class="profile">
   <h2>{{user.local.username}}</h2>
-  {{#if user.basketball}}
+  {{#if user.basketballs}}
     <div class="basketballs">
-      {{#each user.basketball}}
+      {{#each user.basketballs}}
          {{> 'basketball'}}
       {{/each}}
     </div>
   {{else}}
+      <h2>{{user.local.username}}</h2>
     <p>No Favorite Players Yet</p>
   {{/if}}
 </section>
