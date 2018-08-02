@@ -1,32 +1,31 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width-device-width'>
     <title>Ball Is Life</title>
-
-  </head>
+    </head>
   <body>
-    <header class="site-header">
+    <header>
+      <h1>Ball is Life</h1>
+
       <nav>
-        <div class="nav-wrapper">
-          <class="brand-logo left">Ball Is Life</a>
-          <ul class="right">
+        <ul class='navbar'>
           {{#if currentUser}}
-            <li><a href="/basketball/new">Search for a player</a></li>
-            <li><a href="/user/{{currentUser.id}}">Profile</a></li>
-            <li><a href="/user/logout">Log Out</a></li>
+          <li href='/user/profile'>Go to Team</a></li>
+          <li href='/basketball/new'>Add a Player to Team</a></li>
+          <li href='/user/logout'>Log Out</a></li>
           {{else}}
-            <li><a href="/user/login">Log In</a></li>
-            <li><a href="/user/sign-up">Sign Up</a></li>
+          <li href='#'>Log In</a></li>
+          <li href='#'>Sign Up</a></li>
           {{/if}}
-          </ul>
-        </div>
+        </ul>
       </nav>
     </header>
-    <main class>
+
+    <main>
       {{{ body }}}
     </main>
-    <script sec = '/js/pleasework.js'></script>
   </body>
 </html>

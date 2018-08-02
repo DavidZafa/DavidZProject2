@@ -1,42 +1,50 @@
-const User = require("../models/user");
-const { Basketball } = require("../models/basketball");
-const passport = require("passport");
+const User = require('../models/user')
+const Basketball = require('../models/basketball')
+const passport = require('passport')
 
 module.exports = {
   show: (req, res) => {
     User.findOne({ _id: req.params.id })
       .populate({
-        path: "show",
-        options: { limit: 5, sort: { createdAt: -1 } }
+        path: 'team',
+        options: { sort: { title: 1 } }
       })
       .then(user => {
-        res.render("user/show", { user });
-      });
+        res.render('user/team', { user })
+      })
+
   },
   login: (req, res) => {
-    },
+  },
   createLogin: (req, res) => {
-    const login = passport.authenticate("local-login", {
-      successRedirect: "/user/profile",
-      failureRedirect: "/login",
-      failureFlash: true
-    });
+    const loginProperty = passport.authenticate('local-login', {
+      successRedirect: '/user/profile',
+      failureRedirect: '/login'
+    })
 
-    return login(req, res);
+    return loginProperty(req, res)
   },
   signUp: (req, res) => {
   },
   createSignUp: (req, res) => {
-    const signup = passport.authenticate("local-signup", {
-      successRedirect: "/",
-      failureRedirect: "/signup",
+    const signupStrategy = passport.authenticate('local-signup', {
+      successRedirect: '/user/profile',
+      failureRedirect: '/login',
       failureFlash: true
-    });
-
-    return signup(req, res);
+    })
+    return signupStrategy(req, res)
   },
   logout: (req, res) => {
-    req.logout();
-    res.redirect("/");
+    req.logout()
+    res.redirect('/')
+  },
+  update: (req, res) => {
+    req.user.team.push(req.body.playerId)
+    req.user.save(err => {
+      res.redirect(`/user/${req.user.id}`)
+    })
+  },
+  profile: (req, res) => {
+    res.redirect(`/user/${req.user.id}`)
   }
-};
+}

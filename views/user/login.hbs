@@ -1,20 +1,39 @@
-<section class="row">
-  <h4>Log In:</h4>
+<h3 class='login'>Log In</h3>
 
-  {{#if loginMessage}}
-    <p class="alert">{{loginMessage}}</p>
-  {{/if}}
+{{#if loginMessage}}
+  <div class="alert alert-danger">{{loginMessage}}</div>
+{{/if}}
 
-  <form action="/user/login" method="POST" class="auth-form">
-    <p class="input-field">
-      <input type="email" name="email" placeholder="Email">
-    </p>
-    <p class="input-field">
-      <input type="password" name="password" placeholder="Password">
-    </p>
+<form action="/user/login" method="POST">
+  <p class='input-field'>
+    <input type='text' name='email' placeholder='Email'>
+  </p>
+  <p class='input-field'>
+    <input type='password' name='password' placeholder='Password'>
+  </p>
+  <p class='input field'>
+    <input type='submit' value='Log In'>
+  </p>
+</form>
 
-    <p class="input-field">
-      <input type="submit" value="Log In" class="btn waves-effect waves-light">
-    </p>
-  </form>
-</section>
+
+<h3 class='sign-up'>Or Sign Up</h3>
+
+{{#if message}}
+  <div class="alert alert-danger">{{message}}</div>
+{{/if}}
+
+<form action="/user/signUp" method="POST">
+  <p class='input-field'>
+    <input type='text' name='firstname' placeholder='First Name'>
+  </p>
+  <p class='input-field'>
+    <input type='text' name='email' placeholder='Email'>
+  </p>
+  <p class='input-field'>
+    <input type='password' name='password' placeholder='Password'>
+  </p>
+  <p class='input-field'>
+    <input type='submit' value='Sign Up'>
+  </p>
+</form>

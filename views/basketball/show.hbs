@@ -1,16 +1,18 @@
-<div class = 'search'>
-<p class='playerfirstname'>{{basketball.player.firstName}}</p>
-<p class='playerlastname'>{{basketball.player.lastName}}</p>
-<p class='playerid'>{{basketball.player.playerID}}</p>
-<p class='playerteam'>{{basketball.player.teamID}}</p>
-<form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
-  <p class='input-field'>
-    <input type="hidden" name="playerID" value="{{player._id}}">
-    <input class='addto' type='submit' value='+ to Team'>
-  </p>
-</form>
 
-  <p class='or'>Or</p>
+<div class='searchresult'>
+    <img class='headshot' src={{player.image}}>
+    <p class='playername'>{{player.name}}</p>
+    <p class='playernumber'{{player.number}}</p>
+    <p class='playerteam'{{player.team}}</p>
 
-  <p class='pagelinkparent'><a class='pagelink pagelinkshow' href='/basketball/new'>Go Back</a></p>
+    <form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
+      <p class='input-field'>
+        <input type="hidden" name="playerName" value="{{playerName}}">
+        <input class='addto' type='submit' value='Add To Team'>
+      </p>
+    </form>
+
+      <p class='or'>Or</p>
+
+      <p class='pagelinkparent'><a class='pagelink pagelinkshow' href='/basketball/new'>Go Back</a></p>
 </div>
