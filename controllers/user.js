@@ -39,7 +39,7 @@ module.exports = {
     res.redirect('/')
   },
   update: (req, res) => {
-    req.user.team.push(req.body.playerId)
+    req.user.player.push(req.body.playerId)
     req.user.save(err => {
       res.redirect(`/user/${req.user.id}`)
     })

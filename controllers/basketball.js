@@ -7,14 +7,14 @@ module.exports = {
 
   },
   new: (req, res) => {
-    res.render('basketball/new', {title: 'new'})
+    res.render('basketball/new')
   },
   search: (req, res) => {
     console.log(req.body)
-    Basketball.findOne({ 'info.title': req.body.title })
-      .then(game => {
-        // console.log(game)
-        res.render('basketball/show', { game })
+    Basketball.findOne({ 'info.name': req.body.name})
+      .then(player => {
+
+        res.render('basketball/show', { player })
       })
   },
   update: (req, res) => {

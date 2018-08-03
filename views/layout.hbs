@@ -4,25 +4,39 @@
   <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width-device-width'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="jumbotron text-center">
     <title>Ball Is Life</title>
     </head>
   <body>
     <header>
       <h1>Ball is Life</h1>
-
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
       <nav>
-        <ul class='navbar'>
+    <ul class='navbar'>
           {{#if currentUser}}
-          <li href='/user/profile'>Go to Team</a></li>
-          <li href='/basketball/new'>Add a Player to Team</a></li>
-          <li href='/user/logout'>Log Out</a></li>
-          {{else}}
-          <li href='#'>Log In</a></li>
-          <li href='#'>Sign Up</a></li>
-          {{/if}}
-        </ul>
-      </nav>
+          <li> <a href='/user/profile'>Go to Team</a></li>
+    </div>
+    <div class="col-sm-4">
+      <li> <a href='/basketball/new'>Add a Player to Team</a></li>
+    </div>
+    <div class="col-sm-4">
+      <li> <a href='/user/logout'>Log Out</a></li>
+      {{else}}
+
+      {{/if}}
+    </ul>
+    </nav>
     </header>
+    </div>
+  </div>
+</div>
+
 
     <main>
       {{{ body }}}

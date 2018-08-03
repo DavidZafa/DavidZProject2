@@ -2,45 +2,38 @@
 
 C- Creating user profile<br/>
 R- Breads looked at/Purchased<br/>
-U- Adding things to Cart<br/>
-D- Favorite Breads/Items in Cart<br/>
+U- Adding Players To Team<br/>
+D-Remove Players<br/>
 
-
-User {
-  local :{
-    email
-    password
-  },
-Viewed: {
-
-  ref: [Bread]
-  }
+User Model {
+  Name,
+  Email,
+  Password
 }
 
-Bread {
-
-  name
-  description
-   path img
-},
-
-
-Cart: {
-
-  },
-  Purchased: {
-
-    ref: "Cart"
-  }
-
+Basketball Model {
+  image
+  Name
+  position
+  team
+  number
+  ppg
 }
+
+Team Model {
+  Team
+  Points
+}
+
+^^^ This model is for when I eventually figure out how to add fantasy points and such
 
 
 
 Routes
-app.js
+applicaton.js
+team.js
 user.js
-index.js
+basketball.js
 
 module.exports {
 
