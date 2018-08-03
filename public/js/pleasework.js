@@ -1,9 +1,8 @@
 function showDetails(e) {
-  console.log(e.target)
   e.target.classList.add('showdetails')
 }
 
-const basketball = document.querySelectorAll('.headshots')
+const basketball = document.querySelectorAll('.headshot')
 for(let i = 0; i < basketball.length; i++) {
-  basketball[i].addEventListener('mouseover', showDetails)
+  basketball[i].addEventListener('mouseover', showdetails)
 }

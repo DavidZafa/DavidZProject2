@@ -14,7 +14,7 @@ const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const Basketball = new Schema({
-  info: {
+  stats: {
     image: String ,
     name: String,
     position: String,
