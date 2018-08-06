@@ -4,11 +4,11 @@ const bcrypt = require('bcrypt-nodejs')
 
 const User = new Schema({
   local: {
-    username: String,
+    name: String,
     email: String,
     password: String
   },
-  team: [
+  library: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Team'
