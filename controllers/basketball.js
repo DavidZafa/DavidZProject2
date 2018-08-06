@@ -11,7 +11,7 @@ module.exports = {
   },
   search: (req, res) => {
     console.log(req.body)
-    Basketball.findOne({ 'info.name': req.body.name})
+    Basketball.findOne({ 'stats.name': req.body.name})
       .then(player => {
 
         res.render('basketball/show', { player })

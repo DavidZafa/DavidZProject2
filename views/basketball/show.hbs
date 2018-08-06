@@ -1,9 +1,9 @@
 
 <div class='searchresult'>
-    <img class='headshot' src= {{player.image}}>
-    <p class='playername'>{{player.name}}</p>
-    <p class='playernumber'{{player.number}}</p>
-    <p class='playerteam'{{player.team}}</p>
+    <img class='headshot' src= {{player.stats.image}}>
+    <p class='playername'>{{player.stats.name}}</p>
+    <p class='playernumber'{{player.stats.number}}</p>
+    <p class='playerteam'{{player.stats.team}}</p>
 
     <form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
       <p class='input-field'>
