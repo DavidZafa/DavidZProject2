@@ -1,0 +1,92 @@
+
+[
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201939.png",
+  "Name": "Stephen Curry",
+  "Position": "Point Guard",
+  "Team": "Golden State Warriors",
+  "Number": 30,
+  "PPG": 28.9
+},
+{
+"Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203076.png",
+"Name": "Anthony Davis",
+"Position": "Center",
+"Team": "New Orleans Pelicans",
+"Number": 23,
+"PPG": 28.1
+},
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201935.png",
+"Name": "James Harden",
+"Position": "Point Guard",
+"Team": "Houston Rockets",
+"Number": 13,
+"PPG": 30.4
+},
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203076.png",
+"Name": "Anthony Davis",
+"Position": "Center",
+"Team": "New Orleans Pelicans",
+"Number": 23,
+"PPG": 28.1
+},
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2544.png",
+  "Name": "Lebron James",
+  "Position": "Forward",
+  "Team": "Los Angeles Lakers",
+  "Number": 23,
+  "PPG": 9.87
+},
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203507.png",
+  "Name": "Giannis Antetokounmpo",
+  "Position": "Forward",
+  "Team": "Milwaukee Bucks",
+  "Number": 34,
+  "PPG": 26.9
+},
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203081.png",
+  "Name": "Damian Lillard",
+  "Position": "Point Guard",
+  "Team": "Portland Trail Blazers",
+  "Number": 0,
+  "PPG": 26.9
+},
+{  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201142.png",
+  "Name": "Kevin Durant",
+  "Position": "Forward",
+  "Team": "Golden State Warriors",
+  "Number": 35,
+  "PPG": 26.4
+},
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201566.png",
+  "Name": "Russell Westbrook",
+  "Position": "Point Guard",
+  "Team": "Oklahoma City Thunder",
+  "Number": 0,
+  "PPG": 25.4
+},
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202326.png",
+"Name": "DeMarcus Cousins",
+"Position": "Center",
+"Team": "Golden State Warriors",
+"Number": 0,
+"PPG": 25.2
+},
+{
+  "Image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1626164.png",
+  "Name": "Devin Booker",
+  "Position": "Guard",
+  "Team": "Phoenix Suns",
+  "Number": 1,
+  "PPG": 24.9
+
+
+}
+]

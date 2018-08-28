@@ -38,10 +38,11 @@ module.exports = {
     req.logout()
     res.redirect('/')
   },
+
   update: (req, res) => {
-    req.basketball.push(req.body.playerName)
+    req.Basketball.push(req.Basketball)
     req.user.save(err => {
-      res.redirect(`/user/${req.user.id}`)
+      res.redirect(`/user/team`)
     })
   },
   profile: (req, res) => {

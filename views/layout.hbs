@@ -15,18 +15,18 @@
       <h1>Ball is Life</h1>
 </div>
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
+
+    <div class="btn-group">
       <nav>
     <ul class='navbar'>
           {{#if currentUser}}
-          <li> <a href='/user/profile'>Go to Team</a></li>
+          <li> <a href='/user/profile'class="btn btn-primary">Go to Team</a></li>
     </div>
     <div class="col-sm-4">
-      <li> <a href='/basketball/new'>Add a Player to Team</a></li>
+      <li> <a href='/basketball/new'class="btn btn-primary">Add a Player to Team</a></li>
     </div>
     <div class="col-sm-4">
-      <li> <a href='/user/logout'>Log Out</a></li>
+      <li> <a href='/user/logout'class="btn btn-primary">Log Out</a></li>
       {{else}}
 
       {{/if}}
@@ -34,7 +34,7 @@
     </nav>
     </header>
     </div>
-  </div>
+
 </div>
 
 

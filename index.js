@@ -36,5 +36,8 @@ app.use('/user', require('./routes/user'))
 app.use('/basketball', require('./routes/basketball'))
 app.use('/team', require('./routes/team'))
 
-app.set('port', process.env.PORT || 3000)
-app.listen(process.env.PORT || 3000)
+app.set('port', process.env.PORT || 3001)
+
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
+})

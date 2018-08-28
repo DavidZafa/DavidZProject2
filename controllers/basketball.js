@@ -11,15 +11,28 @@ module.exports = {
   },
   search: (req, res) => {
     console.log(req.body)
-    Basketball.findOne({ 'stats.name': req.body.name})
+    Basketball.findOne({ 'Basketball.Name': req.body.name})
       .then(player => {
 
-        res.render('basketball/show', { player })
+        res.render('basketball/show', { Basketball })
       })
   },
   update: (req, res) => {
   },
   delete: (req, res) => {
 
+  },
+  // update: (req, res) => {
+  //   req.basketball.push(req.player.name)
+  //   req.user.save(err => {
+  //     res.redirect(`/user/${req.user.id}`)
+  //   })
+  // },
+  requireAuth: function(req, res, next) {
+    if (req.isAuthenticated()) {
+      next()
+    } else {
+      res.redirect("/")
+    }
   }
 }
