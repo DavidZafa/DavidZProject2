@@ -11,7 +11,7 @@ const User = new Schema({
   team: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Team'
+      ref: 'Basketball'
     }
   ]
 })

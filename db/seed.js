@@ -1,13 +1,21 @@
 const Basketball = require('../models/basketball')
-const players = require('./players.json')
+const playerData = require('./players.js')
 
-Basketball.deleteMany({})
-.then(() => {
-  Basketball.collection.insertMany(players)
-  .then(player => {
-    console.log(player)
+
+
+
+playerData.forEach(player => {
+  Basketball.create({
+    info: {
+      image: player.image,
+      name: player.name,
+      position: player.position,
+      team: player.team,
+      number: player.number,
+      ppg: player.points
+    }
   })
-  .catch(err => {
-    console.log(err)
+  .then(players => {
+    players.save(err => console.log(err))
   })
 })

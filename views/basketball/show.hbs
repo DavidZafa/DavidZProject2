@@ -1,14 +1,15 @@
 
 <div class='searchresult'>
-    <img class='headshot'{{Basketball.image}}>
-    <p class='playername'>{{Basketball.name}}</p>
-    <p class='playernumber'{{Basketball.number}}</p>
-    <p class='playerteam'{{Basketball.team}}</p>
-
+  <img class='headshot' src = {{player.info.image}}/>
+  <p class='playername'>Name: {{player.info.name}}</p>
+  <p class='playernumber'> Number:{{player.info.number}}</p>
+  <p class='playerteam'>Team: {{player.info.team}}</p>
     <form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
       <p class='input-field'>
-        <input type="hidden" name="playerName" value="{{player.id}}">
+        <input type="hidden" name="playerName" value="{{player._id}}">
+
         <input class='addto' type='submit' value='Add To Team'>
+
       </p>
     </form>
 

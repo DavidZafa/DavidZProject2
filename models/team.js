@@ -5,9 +5,9 @@ const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const Team = new Schema({
-  Basketball: {
+  player: {
     type: Schema.ObjectId,
-    ref: 'basketball'
+    ref: 'Basketball'
   }
 })
 
