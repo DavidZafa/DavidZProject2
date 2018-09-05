@@ -7,13 +7,18 @@ const session = require('express-session')
 const passport = require('passport')
 const methodOverride = require('method-override')
 
+
+
 const app = express()
+
+
+app.use(bodyParser.urlencoded({ extended: true }))
+
 require('./config/passport')(passport)
 
 hbs.registerPartials(__dirname + "/views/partial")
 app.use(express.static(__dirname + '/public'))
 app.use(cookieParser())
-app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'hbs')
 app.use(methodOverride('_method'))
 app.use(
@@ -27,14 +32,15 @@ app.use(flash())
 app.use(passport.initialize())
 app.use(passport.session())
 
+
 app.use(function (req, res, next) {
   res.locals.currentUser = req.user
   next()
 })
 app.use(require('./routes/application.js'))
-app.use('/user', require('./routes/user'))
-app.use('/basketball', require('./routes/basketball'))
-app.use('/team', require('./routes/team'))
+// app.use('/user', require('./routes/user'))
+// app.use('/basketball', require('./routes/basketball'))
+// app.use('/team', require('./routes/team'))
 
 app.set('port', process.env.PORT || 3001)
 

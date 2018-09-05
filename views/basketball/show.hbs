@@ -1,16 +1,37 @@
 
 <div class='searchresult'>
-  <img class='headshot' src = {{player.info.image}}/>
-  <p class='playername'>Name: {{player.info.name}}</p>
-  <p class='playernumber'> Number:{{player.info.number}}</p>
-  <p class='playerteam'>Team: {{player.info.team}}</p>
-    <form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
-      <p class='input-field'>
-        <input type="hidden" name="playerName" value="{{player._id}}">
+  {{#if player}}
+    <table>
+        <tr>
 
+            <th> Name</th>
+            <th>Position</th>
+            <th>Number</th>
+            <th>PPG</th>
+        </tr>
+        {{#each player}}
+            <tr>
+
+                <td>
+
+                <img class="someClass" src="{{info.image}}"></td>
+
+                <td>{{info.name}}</td>
+                <td>{{info.position}}</td>
+                <td>{{info.number}}</td>
+                <td>{{info.points}}</td>
+            </tr>
+        {{/each}}
+    </table>
+{{else}}
+    <h3>That Player Does Not Exist</h3>
+{{/if}}
+      <!-- <p class='input-field'> -->
+        <!-- <input type="hidden" name="playerName" value="{{player}}"> -->
+<form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
         <input class='addto' type='submit' value='Add To Team'>
 
-      </p>
+      <!-- </p> -->
     </form>
 
 </div>

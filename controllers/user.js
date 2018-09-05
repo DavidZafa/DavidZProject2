@@ -7,7 +7,7 @@ module.exports = {
     User.findOne({ _id: req.params.id })
       .populate({
         path: 'team',
-        options: { sort: { Name: 1 } }
+        options: { sort: { name: 1 } }
       })
       .then(user => {
         res.render('user/team', { user })
@@ -40,7 +40,7 @@ module.exports = {
   },
 
   update: (req, res) => {
-    req.user.team.push(req.body.playerID)
+    req.user.team.push(req.body.player)
     // req.Basketball.push(req.Basketball)
     req.user.save(err => {
       res.redirect(`/user/${req.user.id}`)

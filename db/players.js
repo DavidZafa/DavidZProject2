@@ -1,4 +1,4 @@
-module.exports = [
+module.exports =[
 {
   "playerID": 1,
   "image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201939.png",
@@ -81,7 +81,7 @@ module.exports = [
 "points": 25.2
 },
 {
-    "playerID": 10,
+  "playerID": 10,
   "image":"https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1626164.png",
   "name": "Devin Booker",
   "position": "Guard",

@@ -1,8 +1,17 @@
 const Basketball = require('../models/basketball')
 const playerData = require('./players.js')
 
+// var mongoose  = require("./connection");
+// var playerData = require("./seed");
+//
+// var Basketball = mongoose.model("Basketball");
 
 
+// Basketball.remove({}).then(function(){
+//   Basketball.collection.insert(playerData).then(function(){
+//     process.exit()
+//   });
+// });
 
 playerData.forEach(player => {
   Basketball.create({
@@ -12,7 +21,7 @@ playerData.forEach(player => {
       position: player.position,
       team: player.team,
       number: player.number,
-      ppg: player.points
+      points: player.points
     }
   })
   .then(players => {

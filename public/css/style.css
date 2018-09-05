@@ -1,1 +1,25 @@
+* {
+margin: 0;
+box-sizing: border-box;
+text-align: center;
+}
 
+body {
+  background-color: #ffcd55;
+}
+
+header{
+  background-image: url('https://previews.123rf.com/images/leungchopan/leungchopan1202/leungchopan120200073/12191877-basketball-texture.jpg');
+}
+
+
+li {
+  list-style-type: none;
+}
+
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
