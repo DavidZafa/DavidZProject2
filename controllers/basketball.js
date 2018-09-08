@@ -1,5 +1,5 @@
 const Basketball = require('../models/basketball')
-const Team = require('../models/team')
+const BasketballInstance = require('../models/teamshow')
 const User = require('../models/user')
 
 
@@ -11,10 +11,8 @@ module.exports = {
     res.render('basketball/new', {name: 'new'})
   },
   search: (req, res) => {
-    console.log('req body: ', req.body)
     Basketball.findOne({'info.name': req.body.player})
     .then(player => {
-      console.log('player: ', player)
       res.render('basketball/show', { player })
     })
   },

@@ -1,37 +1,38 @@
 
 <div class='searchresult'>
-  {{#if player}}
+  <!-- {{#if player}}
     <table>
-        <tr>
+        <ul>
 
-            <th> Name</th>
+            <th>Name</th>
             <th>Position</th>
             <th>Number</th>
             <th>PPG</th>
-        </tr>
+        </ul>
         {{#each player}}
-            <tr>
+        {{log info}} -->
 
-                <td>
+            <ul>
 
-                <img class="someClass" src="{{info.image}}"></td>
 
-                <td>{{info.name}}</td>
-                <td>{{info.position}}</td>
-                <td>{{info.number}}</td>
-                <td>{{info.points}}</td>
-            </tr>
-        {{/each}}
+                <li>{{info.name}}</li>
+                <li>{{info.position}}</li>
+                <li>{{info.number}}</li>
+                <li>{{info.points}}</li>
+                <li><img class="someClass" src={{info.image}}></li>
+
+            </ul>
+        <!-- {{/each}}
     </table>
 {{else}}
     <h3>That Player Does Not Exist</h3>
-{{/if}}
-      <!-- <p class='input-field'> -->
-        <!-- <input type="hidden" name="playerName" value="{{player}}"> -->
-<form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
-        <input class='addto' type='submit' value='Add To Team'>
+{{/if}} -->
 
-      <!-- </p> -->
-    </form>
+<form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
+    <p class='input-field'>
+      <input type="hidden" name="playerID" value="{{player._id}}">
+      <input class='addto' type='submit' value='Add To Team'>
+    </p>
+  </form>
 
 </div>

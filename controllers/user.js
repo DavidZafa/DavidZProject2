@@ -40,12 +40,12 @@ module.exports = {
   },
 
   update: (req, res) => {
-    req.user.team.push(req.body.player)
-    // req.Basketball.push(req.Basketball)
+    req.user.team.push(req.body.playerID)
     req.user.save(err => {
       res.redirect(`/user/${req.user.id}`)
     })
   },
+
   profile: (req, res) => {
     res.redirect(`/user/${req.user.id}`)
   }

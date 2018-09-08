@@ -13,7 +13,7 @@ router.get('/login', function (req, res) {
 
 router.use('/user', require('./user'))
 router.use('/basketball', require('./basketball'))
-router.use('/team', require('./team'))
+router.use('/teamshow', require('./teamshow'))
 
 
 module.exports = router

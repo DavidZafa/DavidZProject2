@@ -7,11 +7,11 @@ const playerData = require('./players.js')
 // var Basketball = mongoose.model("Basketball");
 
 
-// Basketball.remove({}).then(function(){
-//   Basketball.collection.insert(playerData).then(function(){
-//     process.exit()
-//   });
-// });
+Basketball.remove({}).then(function(){
+  Basketball.collection.insert(playerData).then(function(){
+    
+  });
+});
 
 playerData.forEach(player => {
   Basketball.create({
