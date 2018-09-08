@@ -33,7 +33,7 @@ module.exports =[
   "position": "Forward",
   "team": "Los Angeles Lakers",
   "number": 23,
-  "points": 9.87
+  "points": 29.87
 },
 {
     "playerID": 5,

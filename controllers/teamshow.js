@@ -11,10 +11,5 @@ module.exports = {
   },
   create: (req, res) => {
   },
-  delete: (req, res) => {
-   Basketball.findOneAndRemove({ _id: req.params.player }).then(() => {
-     res.redirect("/")
-   })
- }
 
 }

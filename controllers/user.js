@@ -45,6 +45,11 @@ module.exports = {
       res.redirect(`/user/${req.user.id}`)
     })
   },
+  delete: (req, res) => {
+    User.findOneAndRemove({_id: req.params.id}).then(() => {
+      res.redirect("/")
+    })
+  },
 
   profile: (req, res) => {
     res.redirect(`/user/${req.user.id}`)

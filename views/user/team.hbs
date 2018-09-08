@@ -1,10 +1,18 @@
 
 <div class='myteam'>
   <h2 class='teamheader'>Your Team</h2>
+
     {{#if user.team}}
+    <div class="user-show-button-wrapper d-flex flex-column">
+      <div class="user-delete">
+          <form action="/user/{{user.id}}?_method=DELETE" method="POST">
+              <input class="btn btn-outline-info" type="submit" value="Delete User" />
+          </form>
+      </div>
     <div class = "players">
       {{#each user.team}}
           {{> 'basketball'}}
+
         {{/each}}
       </div>
 

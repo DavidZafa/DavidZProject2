@@ -11,4 +11,6 @@ router.get('/profile', user.profile)
 router.get('/logout', user.logout)
 router.get('/:id', user.show)
 router.put('/:id', user.update)
+router.delete('/:id', user.delete)
+
 module.exports = router
