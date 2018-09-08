@@ -42,7 +42,8 @@ app.use(require('./routes/application.js'))
 // app.use('/basketball', require('./routes/basketball'))
 // app.use('/team', require('./routes/team'))
 
-var PORT = process.env.PORT || 3000;
-app.listen(PORT, "0.0.0.0", function() {
-console.log("Listening on Port 3000");
-});
+app.set('port', process.env.PORT || 3001)
+
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
+})
