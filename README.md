@@ -1,5 +1,7 @@
 # DavidZProject2
 
+# Deployed App
+https://davidzafirovicfullstack.herokuapp.com
 
 # Web Application - Fantasy Basketball Team Selector
 Created by David Zafirovic
