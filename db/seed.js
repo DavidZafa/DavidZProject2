@@ -9,9 +9,9 @@ const playerData = require('./players.js')
 
 Basketball.remove({}).then(function(){
   Basketball.collection.insert(playerData).then(function(){
-    
-  });
-});
+
+  })
+})
 
 playerData.forEach(player => {
   Basketball.create({

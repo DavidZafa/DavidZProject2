@@ -4,13 +4,13 @@ const User = require("../models/user");
 module.exports = function(passport) {
   passport.serializeUser(function(user, callback) {
     callback(null, user.id);
-  });
+  })
 
   passport.deserializeUser(function(id, callback) {
     User.findById(id, function(err, user) {
       callback(err, user);
-    });
-  });
+    })
+  })
 
   passport.use(
     "local-signup",
@@ -28,7 +28,7 @@ module.exports = function(passport) {
                 null,
                 false,
                 req.flash("signupMessage", "this email is already taken")
-              );
+              )
             } else {
               let newUser = new User();
               newUser.local.email = email;
@@ -37,13 +37,13 @@ module.exports = function(passport) {
               newUser.save(err => {
                 if (err) throw err;
                 return callback(null, newUser);
-              });
+              })
             }
           })
           .catch(err => console.log(err));
       }
     )
-  );
+  )
 
   passport.use(
     "local-login",
@@ -62,7 +62,7 @@ module.exports = function(passport) {
               null,
               false,
               req.flash("loginMessage", "No user found")
-            );
+            )
           }
           if (!user.validPassword(password)) {
             return callback(
@@ -72,8 +72,8 @@ module.exports = function(passport) {
             );
           }
           return callback(null, user);
-        });
+        })
       }
     )
-  );
-};
+  )
+}

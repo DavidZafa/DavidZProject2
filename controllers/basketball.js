@@ -18,7 +18,6 @@ module.exports = {
   },
   update: (req, res) => {
   },
-
   delete: (req, res) => {
     User.findOne({_id: req.params.id})
     .then(user => {
@@ -28,9 +27,4 @@ module.exports = {
       })
     })
   }
- //  delete: (req, res) => {
- //   Basketball.findOneAndRemove({ _id: req.params.id }).then(() => {
- //     res.redirect("/")
- //   })
- // }
 }

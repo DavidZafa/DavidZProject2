@@ -7,9 +7,7 @@ module.exports = {
     res.render('teamshow/show', {title: 'express'})
   },
   new: (req, res) => {
-
   },
   create: (req, res) => {
   },
-
 }

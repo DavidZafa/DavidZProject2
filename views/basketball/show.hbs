@@ -1,29 +1,10 @@
 
 <div class='searchresult'>
-  <!-- {{#if player}}
-    <table>
-        <ul>
-
-            <th>Name</th>
-            <th>Position</th>
-            <th>Number</th>
-            <th>PPG</th>
-        </ul>
-        {{#each player}}
-        {{log info}} -->
-                <img class="someClass" src={{info.image}}>
-
-        <!-- {{/each}}
-    </table>
-{{else}}
-    <h3>That Player Does Not Exist</h3>
-{{/if}} -->
-
-<form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
+  <img class="someClass" src={{info.image}}>
+  <form action='/user/{{currentUser._id}}?_method=PUT' method='POST'>
     <p class='input-field'>
-      <input type="hidden" name="playerID" value="{{player._id}}">
-      <input class='addto' type='submit' value='Add To Team'>
+    <input type="hidden" name="playerID" value="{{player._id}}">
+    <input class='addto' type='submit' value='Add To Team'>
     </p>
   </form>
-
 </div>
